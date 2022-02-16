@@ -1,5 +1,6 @@
 <?php
 session_start();
+login($email, $pass);
 
 $_SESSION["usuari"] = $_POST["usuari"];
 $_SESSION["password"] = md5($_POST["password"]);
@@ -23,7 +24,7 @@ else {
         <br>
         <label for="">Contrasenya</label>
         <br>
-        <input type="password" name="password" id="">
+        <input type="password" name="password">
         <input type="submit" value="enviar" name="enviar">
     </form>
 <?php
